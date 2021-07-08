@@ -4,10 +4,7 @@ title: Mappa 1
 permalink: /maps/1/
 ---
 <style>
-#map {
-  position: fixed;
-  width: 61.6%;
-}
+
 #features {
   width: 38.4%;
   margin-left: 61.6%;
@@ -32,18 +29,35 @@ section:last-child {
 margin-top: 10px;
 margin-bottom: 10px;
 }
+.mapboxgl-popup  {
+max-width: 400px;
+font-weight: bold;
+}
 </style>
 
 <!--<nav id="layerswitch"></nav>-->
-<div id="map"></div>
+<div id="map">
+  <div id="zones-legend" class="legend">
+  <h6>Componenti UNESCO</h6>
+  <div><span style="background-color: #f768a1"></span>Core zone</div>
+  <div><span style="background-color: #feebe2"></span>Buffer zone</div>
+  </div>
+</div>
+<div class='map-menu'>
 <div id="menu">
   <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
   <label for="satellite-v9">Vista satellitare</label>
   <input id="streets-v11" type="radio" name="rtoggle" value="streets">
   <label for="streets-v11">Carta topografica</label>
 </div>
-
+<button id="fit">Visualizza percorso completo</button>
+</div>
 <div id="features">
+  <div class="d-flex flex-md-row justify-content-center mt-2">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <img src="/assets/img/logo-ufficiale-paesaggi-vitivinicoli.png" alt="" height="54" class="mx-auto d-block">
+      </a>
+    </div>
   <section id="monferrato-infernot" class="active">
     <h4>Il Monferrato degli Infernot - La Pietra da Cantoni</h4>
     <p>
@@ -91,5 +105,10 @@ margin-bottom: 10px;
     Nell’area sono presenti numerosi luoghi del vino relativi all’intera filiera produttiva del Barolo, tra cui spiccano aziende vitivinicole di storica fondazione che hanno contribuito alla nascita e sviluppo di questo vino, quali le proprietà della Famiglia Falletti di Barolo e i tenimenti di Fontanafredda appartenuti alla casa Reale dei Savoia.
 <img src="/../assets/img/langa-barolo/3.jpg" class="img-fluid sidebar" alt="La Langa del Barolo">
     </p>
+    <div class="d-flex flex-md-row justify-content-center mt-2">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <img src="/assets/img/logo-ufficiale-paesaggi-vitivinicoli.png" alt="" height="54" class="mx-auto d-block">
+        </a>
+      </div>
   </section>
 </div>
