@@ -21,7 +21,7 @@
 title: UNESCO LRM
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Strumenti a supporto della didattica: I paesaggi vitivinicoli di Langhe-Roero e Monferrato: contenuti multimediali ed interattivi per gli studenti.
+  Strumenti a supporto della didattica: I paesaggi vitivinicoli di Langhe-Roero e Monferrato: contenuti multimediali ed interattivi per gli studenti delle scuole medie.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb

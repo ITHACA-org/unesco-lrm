@@ -1,0 +1,171 @@
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ3VlcmN1c2d1byIsImEiOiJja29vYTVmdXIwMnJjMm5vanBrb2dwZmp1In0.GFGEzzSYk1QNXmqJ-9lhjA';
+var map = new mapboxgl.Map({
+	container: 'map', // container ID
+	style: 'mapbox://styles/guercusguo/ckqc3h3i600gu18pgwzh0qpjt', // style URL
+	// mapbox://styles/guercusguo/ckqc3h3i600gu18pgwzh0qpjt - SAT
+	// mapbox://styles/guercusguo/ckrc5h3ak03s518scu3lsusbn - TOPO
+	center: [8.39015,45.05038], // starting position
+	zoom: 12 // starting zoom
+	// pitch: 85,
+	// bearing: 80,
+});
+// chapters on map
+var chapters = {
+	'il-paesaggio-percepito': {
+		bearing: 27,
+		center: [8.39015,45.05038],
+		zoom: 12,
+		pitch: 20
+	},
+	'castello-di-serralunga-dalba': {
+		duration: 6000,
+		center: [8.001214, 44.609173],
+		bearing: 150,
+		zoom: 12,
+		pitch: 0
+	},
+	'cappella-della-ss-madonna-delle-grazie': {
+		duration: 6000,
+		bearing: 90,
+		center: [8.35245, 44.77437],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},
+	'bric-noche': {
+		duration: 6000,
+		bearing: 90,
+		center: [8.316680, 44.796988],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},
+	'torre-dei-contini-a-canelli': {
+		duration: 6000,
+		bearing: 90,
+		center: [7.96339,44.61254],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'torre-dei-contini-a-canelli': {
+		duration: 6000,
+		bearing: 90,
+		center: [8.262922, 44.723898],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'bricco-crevacuore': {
+		duration: 6000,
+		bearing: 90,
+		center: [8.237972, 44.725278],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'chiesa-di-s-eusebio-fig-127': {
+		duration: 6000,
+		bearing: 90,
+		center: [8.428854, 45.017528],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'castello-comunale-falletti-di-barolo': {
+		duration: 6000,
+		bearing: 90,
+		center: [87.944039, 44.611090],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'i-punti-di-belvedere': {
+		duration: 6000,
+		bearing: 90,
+		center: [8.286041, 44.721840],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'belvedere-in-piazza-san-marco': {
+		duration: 6000,
+		bearing: 90,
+		center: [7.96339,44.61254],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'belvedere-in-via-giachini': {
+		duration: 6000,
+		bearing: 90,
+		center: [7.96339,44.61254],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'belvedere-in-frazione-moleto': {
+		duration: 6000,
+		bearing: 90,
+		center: [8.371559, 45.052140],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'belvedere-in-piazza-castello': {
+		duration: 6000,
+		bearing: 90,
+		center: [7.934888, 44.637564],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'belvedere-in-via-castello-fig-26': {
+		duration: 6000,
+		bearing: 90,
+		center: [7.994053, 44.652928],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'calanchi': {
+		duration: 6000,
+		bearing: 90,
+		center: [8.088661, 44.677595],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},	'le-stagioni-nelle-langhe': {
+		duration: 6000,
+		bearing: 90,
+		center: [8.103748, 44.720217],
+		zoom: 12,
+		speed: 0.6,
+		pitch: 40
+	},
+};
+
+var layerList = document.getElementById('menu');
+var inputs = layerList.getElementsByTagName('input');
+var fallbackImageUrl = '/../assets/markers/pink-marker.png';
+// Chapter-scrolling: On every scroll event, check which element is on screen
+window.onscroll = function () {
+	var chapterNames = Object.keys(chapters);
+	for (var i = 0; i < chapterNames.length; i++) {
+		var chapterName = chapterNames[i];
+		if (isElementOnScreen(chapterName)) {
+			setActiveChapter(chapterName);
+			break;
+		}
+	}
+};
+
+var activeChapterName = 'monferrato-infernot';
+function setActiveChapter(chapterName) {
+	if (chapterName === activeChapterName) return;
+
+	map.flyTo(chapters[chapterName]);
+
+	document.getElementById(chapterName).setAttribute('class', 'active');
+	document.getElementById(activeChapterName).setAttribute('class', '');
+
+	activeChapterName = chapterName;
+}
+
+function isElementOnScreen(id) {
+	var element = document.getElementById(id);
+	var bounds = element.getBoundingClientRect();
+	return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+// End of chapter-scrolling
+</script>
