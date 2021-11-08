@@ -19,13 +19,13 @@
 # in the templates via {{ site.myvariable }}.
 
 title: UNESCO LRM
-email: your-email@example.com
+email: guido.dicarlo@ithacaweb.org
 description: >- # this means to ignore newlines until "baseurl:"
-  Strumenti a supporto della didattica: I paesaggi vitivinicoli di Langhe-Roero e Monferrato: contenuti multimediali ed interattivi per gli studenti delle scuole medie.
+  Strumenti a supporto della didattica. I paesaggi vitivinicoli di Langhe-Roero e Monferrato -> contenuti multimediali ed interattivi per gli studenti delle scuole medie.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: ITHACA-org
+github_username:  ITHACA-org
 
 # Build settings
 theme: minima
