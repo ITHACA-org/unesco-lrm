@@ -1,0 +1,54 @@
+<style>
+
+#features {
+  width: 38vw;
+  margin-left: 62vw;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fafafa;
+  transition: 1s ease;
+  position: relative;
+}
+.sidebar_hide {
+ width: 0%;
+}
+section {
+  padding: 25px 50px;
+  line-height: 25px;
+  border-bottom: 1px solid #ddd;
+  opacity: 0.25;
+  font-size: 13px;
+}
+section.active {
+  opacity: 1;
+}
+section:last-child {
+  border-bottom: none;
+  margin-bottom: 10vh;
+}
+.sidebar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.mapboxgl-popup  {
+  max-width: 400px;
+  font-weight: bold;
+}
+@media (max-width: 750px) {
+    #features {
+        width: 90vw;
+        margin: 0 auto;
+        opacity: 0.9;
+    }
+    .step {
+      padding-bottom: 100vh;
+      offset-position: bottom 10px top 10 px;
+    }
+    #map {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+}
+</style>
