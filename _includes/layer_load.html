@@ -81,39 +81,8 @@ function addLayer() {
 			// Make the layer visible by default.
 			'icon-image': 'pink-marker',
 			'visibility': 'visible'
-			/*'text-field': [
-			'format',
-			['get', 'Denominaz'],
-			{ 'font-scale': 0.8 },
-			'\n',
-			{},
-		],
-		'text-font': [
-		'Open Sans Semibold',
-		'Arial Unicode MS Bold'],
-		'text-offset': [0, 1.25],
-		'text-anchor': 'top'*/
 	},
 	'source': 'vitivinicoli_punti',
-	// 'paint': {
-	// make circles larger as the user zooms from z12 to z22
-	// 'circle-radius': {
-	// 'base': 3.5,
-	// 'stops': [
-	// [12, 2],
-	// [22, 180]
-	// ]
-	// },
-	// https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-	// 'circle-color': [
-	// 'match',
-	// ['get', 'Provincia'],
-	// 'AL',
-	// '#fbb03b',
-	// 'AT',
-	// '#223b53',
-	// other '#ccc']
-	// }
 });
 map.addLayer({
 	'id': 'sky',
