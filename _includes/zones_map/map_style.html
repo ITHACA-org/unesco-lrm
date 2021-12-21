@@ -13,7 +13,7 @@
  width: 0%;
 }
 section {
-  padding: 25px 50px;
+  padding: 7vh 2vw;
   line-height: 25px;
   border-bottom: 1px solid #ddd;
   opacity: 0.25;
@@ -34,22 +34,36 @@ section:last-child {
   max-width: 400px;
   font-weight: bold;
 }
-@media (max-width: 750px) {
-    #features {
-        width: 100vw;
-        margin: 0 auto;
-        background-color:rgba(255,255,255,0.0);
-        color: #000;
-    }
-    .step {
-      padding-bottom: 90vh;
-      offset-position: bottom 10px top 10 px;
-    }
-    #map {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-    }
+@media (max-width: 768px) {
+  #features {
+    width: 100vw;
+    margin: 0 auto;
+    background-color:transparent;
+    color: #000;
+
+  }
+  section {
+    padding: 5vw 5vw 95vh;
+    border-bottom: 0px ;
+
+  }
+  .mobile-transparent {
+    padding: 5vw 5vw 0vh;
+    line-height: 25px;
+    border-bottom: 1px solid #ddd;
+    opacity: 1;
+    font-size: 15px;
+    background-color:rgba(255,255,255,0.95);
+  }
+  .step {
+    padding-bottom: 1vh;
+    offset-position: bottom 10px top 10 px;
+  }
+  #map {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
 }
 </style>
