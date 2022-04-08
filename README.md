@@ -4,4 +4,4 @@
 
 Bundled with Jekyll.
 
-(Visit here) [https://unesco-lrm.ithacaweb.org]
+[Visit here](https://unesco-lrm.ithacaweb.org)
